@@ -3,6 +3,8 @@ import { useState } from "react";
 import { Visibility, VisibilityOff } from '@mui/icons-material'
 import { Box, FormControl, Grid, IconButton, InputAdornment, InputLabel, OutlinedInput, Button } from '@mui/material'
 import { Link } from "react-router-dom";
+import BlogPng from "../assets/blogger.png"
+
 
 function Home() {
     const [showPassword, setShowPassword] = useState(false);
@@ -20,15 +22,15 @@ function Home() {
         <div>
             <Grid container className='relative min-h-screen w-screen'>
                 <Grid item xs={12} sm={6}>
-                    <div className="flex flex-col justify-center items-center bg-[#4c4784] h-full leading-10">
-                        <img className="object-contain h-[300px] w-[300px] opacity-50" src="https://media-meter.net/reactexam/static/media/mm_white.d1814187.png" alt="Media Meter Logo" />
-                        <p className="text-6xl font-semibold text-slate-500">Media Meter</p>
-                        <p className="text-xl font-semibold text-slate-500">Beyond Monitoring</p>
+                    <div className="absolute z-0 sm:relative flex w-full sm:w-inherit flex-col justify-center items-center bg-[#25515c] h-full">
+                        <img className="object-contain h-[300px] w-[300px]" src={BlogPng} alt="Bloggers Logo" />
+                        <p className="text-6xl font-semibold text-slate-300">Blogger</p>
+                        <p className="text-xl font-semibold text-slate-300 mt-2">Beyond Bloggering</p>
                     </div>
                 </Grid>
                 <Grid item xs={12} sm={6}>
                     <Box component="form" className="flex justify-center items-center h-full">
-                        <Box component="div" id="creds-container" className="flex flex-col justify-around items-stretch w-2/4 p-5 rounded-lg drop-shadow-lg bg-gray-100 border-1 border-emerald-700">
+                        <Box component="div" id="creds-container" className="absolute -translate-y-3/4 sm:relative sm:translate-y-0 flex flex-col justify-around items-stretch w-2/4 p-5 rounded-lg drop-shadow-lg bg-gray-100 border-1 border-emerald-700">
                             <h2 className="text-3xl font-bold my-5">Sign In</h2>
 
                             <div className="flex flex-col justify-around">

@@ -51,7 +51,6 @@ function PostFeed() {
         }
     }
 
-    // const filteredPosts = postsData.filter((fPosts) => !filterPosts ? fPosts : fPosts.title.toLowerCase().includes(filterPosts.toLowerCase()));
     const filteredPosts = postsData.filter((fPosts) => fPosts.title.toLowerCase().includes(filterPosts.toLowerCase()));
 
     console.log(filteredPosts, filterPosts)
