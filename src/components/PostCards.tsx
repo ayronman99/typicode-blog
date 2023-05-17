@@ -1,22 +1,9 @@
-import { Alert, Box, Button, Card, CardActions, CardContent, CardMedia, FormControl, Grid, Modal, Snackbar, TextField, Typography } from '@mui/material';
-import axios from 'axios';
-import { useState } from 'react';
-import zustStore from '../contexts/zustStore';
+import { Card, CardContent, CardMedia, Grid, Typography } from '@mui/material';
 
 
 import { Link } from 'react-router-dom';
-const style = {
-    position: 'absolute' as 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 400,
-    bgcolor: 'background.paper',
-    boxShadow: 24,
-    p: 4,
-};
 
-function PostCards({ userId, id, title, body }: TypiCodeSchema) {
+function PostCards({ id, title, body }: Partial<TypiCodeSchema>) {
 
     return (
         <Grid item xs={12} sm={6} lg={3} className='flex justify-center'>
@@ -37,7 +24,7 @@ function PostCards({ userId, id, title, body }: TypiCodeSchema) {
                         </Typography>
                     </CardContent>
                 </Link>
-            </Card>       
+            </Card>
         </Grid >
 
 

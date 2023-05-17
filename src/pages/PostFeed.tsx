@@ -1,5 +1,4 @@
-import { useState, useContext } from 'react'
-import { ContextPost } from '../contexts/PostContexts'
+import { useState } from 'react'
 import { Alert, Box, Button, Container, Divider, FormControl, Grid, IconButton, InputBase, Modal, Paper, Snackbar, TextField, Typography } from '@mui/material';
 import NavBar from '../components/NavBar';
 import PostCards from '../components/PostCards';

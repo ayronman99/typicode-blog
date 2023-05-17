@@ -23,7 +23,7 @@ function Home() {
             <Grid container className='relative min-h-screen w-screen'>
                 <Grid item xs={12} sm={6}>
                     <div className="absolute z-0 sm:relative flex w-full sm:w-inherit flex-col justify-center items-center bg-[#25515c] h-full">
-                        <img className="object-contain h-[300px] w-[300px]" src={BlogPng} alt="Bloggers Logo" />
+                        <img className="object-contain h-[300px] w-[300px]" src={BlogPng} alt="https://www.flaticon.com/free-icons/blog created by Fathema Khanom - Flaticon" />
                         <p className="text-6xl font-semibold text-slate-300">Blogger</p>
                         <p className="text-xl font-semibold text-slate-300 mt-2">Beyond Bloggering</p>
                     </div>

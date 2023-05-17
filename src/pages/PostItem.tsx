@@ -1,6 +1,6 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom';
-import { Breadcrumbs, CardHeader, Paper, Tooltip, Alert, Box, Button, Card, CardActions, CardContent, CardMedia, FormControl, Grid, Modal, Snackbar, TextField, Typography } from "@mui/material";
+import { Breadcrumbs, CardHeader, Paper, Tooltip, Alert, Box, Button, Card, CardContent, CardMedia, FormControl, Grid, Snackbar, TextField, Typography } from "@mui/material";
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import zustStore from '../contexts/zustStore';
@@ -8,32 +8,17 @@ import zustStore from '../contexts/zustStore';
 //MUI BELOW
 import Avatar from '@mui/material/Avatar';
 import Container from "@mui/material/Container";
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-// const navigator = useNavigate();
-{/* <Button onClick={() => navigator(-1)} sx={{ position: "absolute", left: { xs: 0, md: 20 } }}>
-                <ArrowBackIcon />
-            </Button> */}
-const style = {
-    position: 'absolute' as 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 400,
-    bgcolor: 'background.paper',
-    boxShadow: 24,
-    p: 4,
-};
 
 function PostItem() {
     const { id } = useParams();
     const navigator = useNavigate();
+
     //State and Mutators from zustand
     const postsData = zustStore(state => state.postData);
     const postsUser = zustStore(state => state.postUsers);
     const updatePostHandler = zustStore(state => state.updatePost);
     const deletePostHandler = zustStore(state => state.deletePost);
 
-    const [open, setOpen] = useState(false);
     const [openSnack, setOpenSnack] = useState(false);
     const [snackSeverity, setSnackSeverity] = useState(false);
     const [initEditPost, setInitEditPost] = useState(false);
